@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yogeshwar Kulkarni - Senior Software Engineer in Test</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            overflow-x: hidden;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        header {
+            background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #4facfe);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            color: white;
+            padding: 6rem 2rem 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(255,255,255,0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            animation: fadeInUp 1s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease 0.2s both;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-links {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease 0.4s both;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .contact-links a:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            background: white;
+            margin: 2rem 0;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+        }
+
+        section:nth-child(1) { animation-delay: 0.1s; }
+        section:nth-child(2) { animation-delay: 0.2s; }
+        section:nth-child(3) { animation-delay: 0.3s; }
+        section:nth-child(4) { animation-delay: 0.4s; }
+        section:nth-child(5) { animation-delay: 0.5s; }
+        section:nth-child(6) { animation-delay: 0.6s; }
+        section:nth-child(7) { animation-delay: 0.7s; }
+
+        h2 {
+            color: #667eea;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #667eea;
+            font-size: 1.8rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: #f093fb;
+            transition: width 0.5s ease;
+        }
+
+        section:hover h2::after {
+            width: 100%;
+        }
+
+        .hero-intro {
+            font-size: 1.2rem;
+            line-height: 1.9;
+            color: #555;
+            margin-bottom: 2rem;
+        }
+
+        .hero-intro strong {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            color: white;
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: scale(1.05) rotate(2deg);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .highlight-card {
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8eaff 100%);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+            transition: all 0.3s ease;
+        }
+
+        .highlight-card:hover {
+            transform: translateX(10px);
+            border-left-width: 8px;
+        }
+
+        .highlight-card::before {
+            content: "✓";
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-right: 0.5rem;
+        }
+
+        .experience-item {
+            margin-bottom: 2.5rem;
+            padding: 1.5rem;
+            background: #fafafa;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+            transition: all 0.3s ease;
+        }
+
+        .experience-item:hover {
+            background: #f0f2ff;
+            transform: translateX(10px);
+            border-left-width: 8px;
+        }
+
+        .experience-header {
+            margin-bottom: 1rem;
+        }
+
+        .experience-title h3 {
+            color: #333;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .company {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .date {
+            color: #888;
+            font-size: 0.9rem;
+            margin-top: 0.25rem;
+            font-style: italic;
+        }
+
+        .experience-item ul {
+            margin-left: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .experience-item li {
+            margin-bottom: 0.75rem;
+            line-height: 1.7;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .skill-category {
+            background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 2px solid #e8eaff;
+            transition: all 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px) scale(1.02);
+            border-color: #667eea;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+        }
+
+        .skill-category h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .skill-tag {
+            background: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            border: 2px solid #e8eaff;
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+
+        .skill-tag:hover {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+            transform: scale(1.1);
+        }
+
+        .education-item, .cert-item {
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            background: #fafafa;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .education-item:hover, .cert-item:hover {
+            background: #f0f2ff;
+            transform: translateX(10px);
+        }
+
+        .education-item h3 {
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .education-details {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .cert-item {
+            background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+            border-left: 3px solid #667eea;
+            font-weight: 500;
+        }
+
+        .publications {
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8eaff 100%);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            border-left: 4px solid #667eea;
+            transition: all 0.3s ease;
+        }
+
+        .publications:hover {
+            transform: translateX(10px);
+            border-left-width: 8px;
+        }
+
+        .publications h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1.1rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .highlights {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Yogeshwar Kulkarni</h1>
+        <p>Senior Software Engineer in Test | Quality Leadership | Healthcare & Distributed Systems</p>
+        <div class="contact-links">
+            <a href="mailto:yp.kulkarni123@gmail.com">📧 Email</a>
+            <a href="https://www.linkedin.com/in/yogeshwarkulkarni-b35b3610" target="_blank">💼 LinkedIn</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p class="hero-intro">
+                Senior Software Quality Engineer with <strong>9+ years of experience</strong> delivering high-quality, reliable software across healthcare and streaming platforms. I specialize in system validation, end-to-end verification, and leading quality strategy for mission-critical applications where accuracy and reliability are non-negotiable.
+            </p>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">9+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">25%</div>
+                    <div class="stat-label">Test Coverage Increase</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">300+</div>
+                    <div class="stat-label">Bugs Identified</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">50%</div>
+                    <div class="stat-label">Reliability Improvement</div>
+                </div>
+            </div>
+
+            <div class="highlights">
+                <div class="highlight-card">Software Validation & Verification</div>
+                <div class="highlight-card">Quality Strategy & Release Readiness</div>
+                <div class="highlight-card">Backend & RESTful API Testing</div>
+                <div class="highlight-card">End-to-End System Testing</div>
+                <div class="highlight-card">Healthcare & Clinical Applications</div>
+                <div class="highlight-card">CI/CD & Risk-Based Testing</div>
+                <div class="highlight-card">Test Automation Frameworks</div>
+                <div class="highlight-card">QA Mentorship & Leadership</div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="experience-title">
+                        <h3>Senior Software Engineer in Test</h3>
+                        <p class="company">Natera Inc, San Carlos, CA</p>
+                        <p class="date">September 2021 - Present</p>
+                    </div>
+                </div>
+                <ul>
+                    <li>Lead end-to-end quality assurance for complex healthcare platforms, including system-level validation for critical blood and tissue clinical workflows</li>
+                    <li>Drive test strategy and automation initiatives, increasing regression coverage by 25% and significantly reducing production defects</li>
+                    <li>Partner with Engineering, Architecture, and Product teams to identify edge cases, integration gaps, and performance risks early in development</li>
+                    <li>Conduct root cause analysis on production issues and mentor junior QA engineers on test design and quality best practices</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="experience-title">
+                        <h3>Quality Assurance Automation Engineer</h3>
+                        <p class="company">Minerva Networks Inc, San Jose, CA</p>
+                        <p class="date">January 2016 - November 2021</p>
+                    </div>
+                </div>
+                <ul>
+                    <li>Led comprehensive testing of IPTV streaming applications across 10+ device types including mobile, web, and OTT platforms (Roku, Fire TV, Apple TV, Chromecast)</li>
+                    <li>Designed and implemented automation frameworks with Java, Selenium, and Cucumber, dramatically improving test efficiency and coverage</li>
+                    <li>Built REST API test automation using SoapUI and Groovy, contributing to 30% reduction in system downtime and 20% improvement in data throughput</li>
+                    <li>Managed QA environments on Linux, AWS, and Kubernetes; implemented CI/CD pipelines with Jenkins for continuous quality feedback</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>💻 Languages & Scripting</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Groovy</span>
+                        <span class="skill-tag">Shell</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>🤖 Automation & Testing</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Selenium</span>
+                        <span class="skill-tag">Appium</span>
+                        <span class="skill-tag">TestNG</span>
+                        <span class="skill-tag">Cucumber</span>
+                        <span class="skill-tag">WireMock</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>🔌 API & Data</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Postman</span>
+                        <span class="skill-tag">Swagger</span>
+                        <span class="skill-tag">SoapUI</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>⚙️ CI/CD & DevOps</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Jenkins</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Kubernetes</span>
+                        <span class="skill-tag">Docker</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>📋 Test Management</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">TestRail</span>
+                        <span class="skill-tag">Zephyr</span>
+                        <span class="skill-tag">JAMA</span>
+                        <span class="skill-tag">Agile/Scrum</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>🖥️ Platforms</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">Windows</span>
+                        <span class="skill-tag">macOS</span>
+                        <span class="skill-tag">CentOS</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>Master of Science in Computer Science</h3>
+                <p class="education-details">San Francisco Bay University | 2014 - 2015</p>
+            </div>
+            <div class="education-item">
+                <h3>Bachelor's Degree in Computer Engineering</h3>
+                <p class="education-details">University of Pune, India | 2011 - 2013</p>
+            </div>
+            <div class="education-item">
+                <h3>Technical Diploma in Computer Technology</h3>
+                <p class="education-details">Maharashtra State Board of Technical Education | 2006 - 2010</p>
+            </div>
+        </section>
+
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <div class="certifications-grid">
+                <div class="cert-item">Mabl AI Foundations</div>
+                <div class="cert-item">REST API Testing - RestAssured Java</div>
+                <div class="cert-item">Selenium WebDriver with Java</div>
+                <div class="cert-item">Salesforce Certified Developer</div>
+                <div class="cert-item">OpenAI API</div>
+                <div class="cert-item">CAPM Certification Prep</div>
+            </div>
+        </section>
+
+        <section id="publications">
+            <h2>Publications & Recognition</h2>
+            <div class="publications">
+                <h3>"Artificial Intelligence in Software Testing"</h3>
+                <p>International Journal of Innovative Science and Research Technology, June 2024</p>
+            </div>
+            <div class="publications">
+                <h3>"Android Automotive OS"</h3>
+                <p>Published research article</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">Let's connect and build quality software together</p>
+        <p>&copy; 2025 Yogeshwar Kulkarni</p>
+    </footer>
+
+    <script>
+        // Add subtle parallax effect to header
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const header = document.querySelector('header');
+            if (header && scrolled < 600) {
+                header.style.transform = `translateY(${scrolled * 0.5}px)`;
+                header.style.opacity = 1 - (scrolled / 500);
+            }
+        });
+    </script>
+</body>
+</html>
