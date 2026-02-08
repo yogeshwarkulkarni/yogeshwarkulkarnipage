@@ -339,6 +339,196 @@
             font-size: 1rem;
         }
 
+        .publications p {
+            color: #6e6e73;
+            font-size: 1rem;
+        }
+
+        /* AI Showcase Styles */
+        .ai-projects {
+            margin-top: 2rem;
+        }
+
+        .ai-project-card {
+            background: #f5f5f7;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .ai-project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,113,227,0.15);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .project-header h3 {
+            color: #1d1d1f;
+            font-size: 1.5rem;
+            font-weight: 600;
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .project-tag {
+            background: #0071e3;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .project-description {
+            color: #1d1d1f;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .prompt-example {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            border-left: 4px solid #0071e3;
+        }
+
+        .prompt-example h4 {
+            color: #0071e3;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .prompt-example pre {
+            background: #1d1d1f;
+            color: #00ff00;
+            padding: 1rem;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .prompt-example code {
+            color: #00ff00;
+        }
+
+        .impact-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .metric {
+            text-align: center;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+        }
+
+        .metric-value {
+            display: block;
+            font-size: 2rem;
+            font-weight: 600;
+            color: #0071e3;
+            margin-bottom: 0.25rem;
+        }
+
+        .metric-label {
+            display: block;
+            font-size: 0.85rem;
+            color: #6e6e73;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+        }
+
+        .tech-badge {
+            background: white;
+            border: 2px solid #0071e3;
+            color: #0071e3;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .tech-badge:hover {
+            background: #0071e3;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .ai-skills-highlight {
+            margin-top: 3rem;
+            padding: 2rem;
+            background: #f5f5f7;
+            border-radius: 12px;
+        }
+
+        .ai-skills-highlight h3 {
+            color: #1d1d1f;
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .skills-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,113,227,0.2);
+        }
+
+        .skill-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .skill-item h4 {
+            color: #0071e3;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .skill-item p {
+            color: #6e6e73;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
         footer {
             background: #f5f5f7;
             color: #1d1d1f;
@@ -380,6 +570,31 @@
             section {
                 padding: 2rem;
             }
+
+            .project-header {
+                flex-direction: column;
+            }
+
+            .project-header h3 {
+                font-size: 1.25rem;
+            }
+
+            .prompt-example pre {
+                font-size: 0.8rem;
+                padding: 0.75rem;
+            }
+
+            .impact-metrics {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-showcase {
+                grid-template-columns: 1fr;
+            }
+
+            .ai-project-card {
+                padding: 1.5rem;
+            }
         }
     </style>
 </head>
@@ -389,7 +604,7 @@
         <p>Senior Software Engineer in Test</p>
         <p style="font-size: 1.1rem; opacity: 0.9;">Quality Leadership | Healthcare & Distributed Systems</p>
         <div class="contact-links">
-            <a href="mailto:yp.kulkarni123@gmail.com">yp.kulkarni123@gmail.com</a>
+            <a href="/cdn-cgi/l/email-protection#6f161f41041a03040e1d01065e5d5c2f08020e0603410c0002"><span class="__cf_email__" data-cfemail="09707927627c6562687b6760383b3a496e64686065276a6664">[email&#160;protected]</span></a>
             <a href="https://www.linkedin.com/in/yogeshwar-kulkarni-b35b3610/" target="_blank">LinkedIn</a>
         </div>
     </header>
@@ -432,6 +647,205 @@
             </div>
         </section>
 
+        <section id="ai-showcase">
+            <h2>AI & Prompt Engineering in Practice</h2>
+            <p class="hero-intro">
+                Leveraging AI and advanced prompt engineering to transform healthcare testing workflows, improve efficiency, and ensure quality in mission-critical systems.
+            </p>
+
+            <div class="ai-projects">
+                <div class="ai-project-card">
+                    <div class="project-header">
+                        <h3>AI-Powered Test Generation for Clinical Workflows</h3>
+                        <span class="project-tag">Natera Inc</span>
+                    </div>
+                    <p class="project-description">
+                        Implemented GitHub Copilot and advanced prompt engineering to accelerate test creation for blood and tissue clinical workflows, reducing test authoring time by 40%.
+                    </p>
+                    
+                    <div class="prompt-example">
+                        <h4>Prompt Engineering Example:</h4>
+                        <pre><code>// Generate RestAssured test for clinical sample order API
+// POST /api/v1/orders with patientId, sampleType, testPanel
+// Validate: 201 status, orderId generated, HIPAA audit log created
+// Include: specimen type validation, turnaround time check
+// Error cases: duplicate order, invalid patient, missing consent</code></pre>
+                    </div>
+
+                    <div class="impact-metrics">
+                        <div class="metric">
+                            <span class="metric-value">40%</span>
+                            <span class="metric-label">Faster Test Creation</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">500+</span>
+                            <span class="metric-label">AI-Generated Tests</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">95%</span>
+                            <span class="metric-label">Code Quality</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-stack">
+                        <span class="tech-badge">GitHub Copilot</span>
+                        <span class="tech-badge">RestAssured</span>
+                        <span class="tech-badge">TestNG</span>
+                        <span class="tech-badge">Java</span>
+                    </div>
+                </div>
+
+                <div class="ai-project-card">
+                    <div class="project-header">
+                        <h3>HIPAA-Compliant Test Data Generation</h3>
+                        <span class="project-tag">Natera Inc</span>
+                    </div>
+                    <p class="project-description">
+                        Developed AI-driven test data generation system for patient records, ensuring realistic yet compliant synthetic data for comprehensive testing without PHI exposure.
+                    </p>
+                    
+                    <div class="prompt-example">
+                        <h4>Prompt Engineering Pattern:</h4>
+                        <pre><code>// Generate POJO for Patient with HIPAA-compliant test data
+// Fields: MRN (format: MRN-{8 digits}), DOB (age 18-85)
+// Include: realistic names, contact info, medical history
+// Exclude: real PHI, use synthetic data only
+// Add: Builder pattern, validation, Lombok annotations</code></pre>
+                    </div>
+
+                    <div class="impact-metrics">
+                        <div class="metric">
+                            <span class="metric-value">100%</span>
+                            <span class="metric-label">HIPAA Compliant</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">10K+</span>
+                            <span class="metric-label">Test Records</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">60%</span>
+                            <span class="metric-label">Time Saved</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-stack">
+                        <span class="tech-badge">OpenAI API</span>
+                        <span class="tech-badge">Java</span>
+                        <span class="tech-badge">Faker Library</span>
+                        <span class="tech-badge">ChatGPT</span>
+                    </div>
+                </div>
+
+                <div class="ai-project-card">
+                    <div class="project-header">
+                        <h3>Intelligent API Validation Framework</h3>
+                        <span class="project-tag">Natera Inc</span>
+                    </div>
+                    <p class="project-description">
+                        Built AI-enhanced validation framework that generates comprehensive API assertions, schema validation, and edge case coverage for clinical data endpoints.
+                    </p>
+                    
+                    <div class="prompt-example">
+                        <h4>Advanced Validation Prompt:</h4>
+                        <pre><code>// Create schema validation test for lab results API
+// Endpoint: POST /api/results with complex nested structure
+// Validate: JSON schema, business rules, clinical ranges
+// Check: result values within normal ranges per test type
+// Include: boundary testing, null handling, data integrity</code></pre>
+                    </div>
+
+                    <div class="impact-metrics">
+                        <div class="metric">
+                            <span class="metric-value">85%</span>
+                            <span class="metric-label">Edge Case Coverage</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">30%</span>
+                            <span class="metric-label">Defect Detection ↑</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">300+</span>
+                            <span class="metric-label">Validation Rules</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-stack">
+                        <span class="tech-badge">RestAssured</span>
+                        <span class="tech-badge">JSON Schema</span>
+                        <span class="tech-badge">Hamcrest</span>
+                        <span class="tech-badge">AI Copilot</span>
+                    </div>
+                </div>
+
+                <div class="ai-project-card">
+                    <div class="project-header">
+                        <h3>AI-Assisted Test Strategy & Planning</h3>
+                        <span class="project-tag">Natera Inc</span>
+                    </div>
+                    <p class="project-description">
+                        Utilized AI to analyze feature requirements and automatically generate comprehensive test scenarios, risk assessments, and test coverage matrices for clinical workflows.
+                    </p>
+                    
+                    <div class="prompt-example">
+                        <h4>Strategic Planning Prompt:</h4>
+                        <pre><code>// Analyze patient consent workflow requirements
+// Generate: test scenarios covering all consent types
+// Include: regulatory compliance (HIPAA, state laws)
+// Risk areas: data privacy, audit trails, patient rights
+// Output: test cases, edge cases, compliance checklist</code></pre>
+                    </div>
+
+                    <div class="impact-metrics">
+                        <div class="metric">
+                            <span class="metric-value">50%</span>
+                            <span class="metric-label">Planning Time ↓</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">120+</span>
+                            <span class="metric-label">Scenarios Generated</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">Zero</span>
+                            <span class="metric-label">Compliance Issues</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-stack">
+                        <span class="tech-badge">ChatGPT-4</span>
+                        <span class="tech-badge">Claude AI</span>
+                        <span class="tech-badge">JAMA</span>
+                        <span class="tech-badge">TestRail</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ai-skills-highlight">
+                <h3>AI & Prompt Engineering Expertise</h3>
+                <div class="skills-showcase">
+                    <div class="skill-item">
+                        <div class="skill-icon">🤖</div>
+                        <h4>AI-Powered Test Automation</h4>
+                        <p>Leveraging GitHub Copilot, ChatGPT, and Claude for intelligent test generation and maintenance</p>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">✍️</div>
+                        <h4>Advanced Prompt Engineering</h4>
+                        <p>Crafting precise prompts for complex healthcare testing scenarios with 95%+ accuracy</p>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">🔬</div>
+                        <h4>Healthcare AI Testing</h4>
+                        <p>Specialized in testing ML models, clinical decision support systems, and AI-driven diagnostics</p>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">📊</div>
+                        <h4>AI Test Strategy</h4>
+                        <p>Designing test architectures that incorporate AI for continuous improvement and optimization</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="experience">
             <h2>Experience</h2>
             
@@ -443,9 +857,11 @@
                 </div>
                 <ul>
                     <li>Lead end-to-end quality assurance for complex healthcare platforms, including system-level validation for critical blood and tissue clinical workflows</li>
+                    <li>Pioneered AI-powered test automation strategy using GitHub Copilot and advanced prompt engineering, reducing test creation time by 40% while maintaining 95%+ code quality</li>
                     <li>Drive test strategy and automation initiatives, increasing regression coverage by 25% and significantly reducing production defects</li>
+                    <li>Developed HIPAA-compliant AI test data generation system, creating 10,000+ synthetic patient records for comprehensive testing without PHI exposure</li>
                     <li>Partner with Engineering, Architecture, and Product teams to identify edge cases, integration gaps, and performance risks early in development</li>
-                    <li>Conduct root cause analysis on production issues and mentor junior QA engineers on test design and quality best practices</li>
+                    <li>Conduct root cause analysis on production issues and mentor junior QA engineers on AI-assisted test design and quality best practices</li>
                 </ul>
             </div>
 
@@ -466,7 +882,18 @@
 
         <section id="skills">
             <h2>Skills</h2>
+            
             <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>AI & Prompt Engineering</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">GitHub Copilot</span>
+                        <span class="skill-tag">ChatGPT-4</span>
+                        <span class="skill-tag">Claude AI</span>
+                        <span class="skill-tag">OpenAI API</span>
+                        <span class="skill-tag">Prompt Engineering</span>
+                    </div>
+                </div>
                 <div class="skill-category">
                     <h3>Languages & Scripting</h3>
                     <div class="skill-tags">
@@ -570,8 +997,4 @@
     </div>
 
     <footer>
-        <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">Let's connect and build quality software together</p>
-        <p>&copy; 2025 Yogeshwar Kulkarni</p>
-    </footer>
-</body>
-</html>
+        <p style="font-size: 1.1rem; margin-b
