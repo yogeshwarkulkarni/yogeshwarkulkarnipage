@@ -665,8 +665,8 @@
                     
                     <div class="prompt-example">
                         <h4>Prompt Engineering Example:</h4>
-                        <pre><code>// Generate RestAssured test for clinical sample order API
-// POST /api/v1/orders with patientId, sampleType, testPanel
+                        <pre><code>// Generate RestAssured test for clinical sample order workflow
+// POST request with patientId, sampleType, testPanel
 // Validate: 201 status, orderId generated, HIPAA audit log created
 // Include: specimen type validation, turnaround time check
 // Error cases: duplicate order, invalid patient, missing consent</code></pre>
@@ -747,8 +747,8 @@
                     
                     <div class="prompt-example">
                         <h4>Advanced Validation Prompt:</h4>
-                        <pre><code>// Create schema validation test for lab results API
-// Endpoint: POST /api/results with complex nested structure
+                        <pre><code>// Create schema validation test for lab results workflow
+// POST request with complex nested structure
 // Validate: JSON schema, business rules, clinical ranges
 // Check: result values within normal ranges per test type
 // Include: boundary testing, null handling, data integrity</code></pre>
