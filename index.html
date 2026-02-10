@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yogeshwar Kulkarni - Senior Software Engineer in Test</title>
+    <title>Yogeshwar Kulkarni - Software Development Engineer in Test (SDET)</title>
     <style>
         * {
             margin: 0;
@@ -12,126 +12,111 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
             line-height: 1.6;
-            color: #1d1d1f;
-            background: #fbfbfd;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        header {
-            background: #0071e3;
-            color: white;
-            padding: 5rem 3rem 4rem;
-            text-align: center;
-            position: relative;
-        }
-
-        header h1 {
-            font-size: 3.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            letter-spacing: -0.03em;
-            animation: fadeIn 0.8s ease;
-        }
-
-        header p {
-            font-size: 1.5rem;
-            font-weight: 400;
-            max-width: 800px;
-            margin: 0 auto 2rem;
-            opacity: 0.95;
-            animation: fadeIn 0.8s ease 0.2s both;
-            line-height: 1.4;
-        }
-
-        .contact-links {
-            margin-top: 2rem;
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            animation: fadeIn 0.8s ease 0.4s both;
-        }
-
-        .contact-links a {
-            color: #0071e3;
-            background: white;
-            text-decoration: none;
-            padding: 0.75rem 1.5rem;
-            border-radius: 980px;
-            transition: all 0.3s ease;
-            font-weight: 500;
-            font-size: 1rem;
-        }
-
-        .contact-links a:hover {
-            background: #f5f5f7;
-            transform: scale(1.05);
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
         }
 
         .container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 2rem 3rem;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.4em;
+            opacity: 0.95;
+            margin-bottom: 5px;
+        }
+
+        .tagline {
+            font-size: 1.1em;
+            opacity: 0.85;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: opacity 0.3s;
+        }
+
+        .contact-info a:hover {
+            opacity: 0.8;
+        }
+
+        .content {
+            padding: 50px 40px;
         }
 
         section {
-            background: white;
-            margin: 2.5rem 0;
-            padding: 3.5rem 3rem;
-            border-radius: 18px;
-            opacity: 0;
-            animation: fadeIn 0.8s ease forwards;
+            margin-bottom: 50px;
         }
-
-        section:nth-child(1) { animation-delay: 0.1s; }
-        section:nth-child(2) { animation-delay: 0.2s; }
-        section:nth-child(3) { animation-delay: 0.3s; }
-        section:nth-child(4) { animation-delay: 0.4s; }
-        section:nth-child(5) { animation-delay: 0.5s; }
-        section:nth-child(6) { animation-delay: 0.6s; }
 
         h2 {
-            color: #1d1d1f;
-            font-size: 2.5rem;
-            font-weight: 600;
-            margin-bottom: 2rem;
-            letter-spacing: -0.02em;
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
         }
 
-        .hero-intro {
-            font-size: 1.25rem;
-            line-height: 1.7;
-            color: #1d1d1f;
-            margin-bottom: 2rem;
-            font-weight: 400;
+        h3 {
+            color: #764ba2;
+            font-size: 1.5em;
+            margin-bottom: 10px;
         }
 
-        .stats-grid {
+        .about-text {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .stats {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            margin: 3rem 0;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
         }
 
         .stat-card {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            padding: 25px;
+            border-radius: 15px;
             text-align: center;
-            padding: 2rem;
-            background: #f5f5f7;
-            border-radius: 12px;
-            transition: transform 0.3s ease;
+            border: 2px solid #667eea30;
+            transition: transform 0.3s;
         }
 
         .stat-card:hover {
@@ -139,892 +124,686 @@
         }
 
         .stat-number {
-            font-size: 3.5rem;
-            font-weight: 600;
-            color: #0071e3;
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.03em;
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #667eea;
+            display: block;
         }
 
         .stat-label {
-            font-size: 1rem;
-            color: #6e6e73;
-            font-weight: 400;
-        }
-
-        .highlights {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .highlight-card {
-            background: #f5f5f7;
-            padding: 1.25rem;
-            border-radius: 12px;
-            font-size: 1rem;
-            color: #1d1d1f;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        .highlight-card:hover {
-            background: #e8e8ed;
-            transform: scale(1.02);
-        }
-
-        .experience-item {
-            margin-bottom: 3rem;
-            padding-bottom: 3rem;
-            border-bottom: 1px solid #d2d2d7;
-        }
-
-        .experience-item:last-child {
-            border-bottom: none;
-        }
-
-        .experience-title h3 {
-            color: #1d1d1f;
-            font-size: 1.75rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.01em;
-        }
-
-        .company {
-            color: #0071e3;
-            font-weight: 600;
-            font-size: 1.25rem;
-            margin-bottom: 0.25rem;
-        }
-
-        .date {
-            color: #6e6e73;
-            font-size: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .experience-item ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .experience-item li {
-            margin-bottom: 1rem;
-            padding-left: 1.5rem;
-            position: relative;
-            line-height: 1.6;
-            color: #1d1d1f;
-            font-size: 1.05rem;
-        }
-
-        .experience-item li:before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: #0071e3;
-            font-weight: bold;
-            font-size: 1.5rem;
+            color: #666;
+            margin-top: 5px;
+            font-size: 0.95em;
         }
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
         }
 
         .skill-category {
-            background: #f5f5f7;
-            padding: 2rem;
+            background: #f8f9fa;
+            padding: 20px;
             border-radius: 12px;
-            transition: transform 0.3s ease;
+            border-left: 4px solid #667eea;
         }
 
-        .skill-category:hover {
-            transform: translateY(-5px);
-            background: #e8e8ed;
-        }
-
-        .skill-category h3 {
-            color: #1d1d1f;
-            margin-bottom: 1.5rem;
-            font-size: 1.25rem;
-            font-weight: 600;
+        .skill-category h4 {
+            color: #667eea;
+            margin-bottom: 12px;
+            font-size: 1.1em;
         }
 
         .skill-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.75rem;
+            gap: 8px;
         }
 
         .skill-tag {
             background: white;
-            padding: 0.6rem 1.2rem;
-            border-radius: 980px;
-            font-size: 0.95rem;
-            color: #1d1d1f;
-            transition: all 0.2s ease;
-            font-weight: 500;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            color: #555;
+            border: 1px solid #ddd;
+            transition: all 0.3s;
         }
 
         .skill-tag:hover {
-            background: #0071e3;
+            background: #667eea;
             color: white;
-            transform: scale(1.05);
+            border-color: #667eea;
         }
 
-        .education-item, .cert-item {
-            margin-bottom: 2rem;
-        }
-
-        .education-item h3 {
-            color: #1d1d1f;
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.01em;
-        }
-
-        .education-details {
-            color: #6e6e73;
-            font-size: 1.05rem;
-        }
-
-        .certifications-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .cert-item {
-            background: #f5f5f7;
-            padding: 1.25rem;
+        .experience-item {
+            margin-bottom: 40px;
+            padding: 25px;
+            background: #f8f9fa;
             border-radius: 12px;
-            font-weight: 500;
-            color: #1d1d1f;
-            transition: all 0.3s ease;
+            border-left: 5px solid #764ba2;
         }
 
-        .cert-item:hover {
-            background: #e8e8ed;
-            transform: translateX(5px);
-        }
-
-        .publications {
-            background: #f5f5f7;
-            padding: 2rem;
-            border-radius: 12px;
-            margin-bottom: 1.5rem;
-            transition: all 0.3s ease;
-        }
-
-        .publications:hover {
-            background: #e8e8ed;
-            transform: translateY(-3px);
-        }
-
-        .publications h3 {
-            color: #0071e3;
-            margin-bottom: 0.5rem;
-            font-size: 1.25rem;
-            font-weight: 600;
-        }
-
-        .publications p {
-            color: #6e6e73;
-            font-size: 1rem;
-        }
-
-        .publications p {
-            color: #6e6e73;
-            font-size: 1rem;
-        }
-
-        /* AI Showcase Styles */
-        .ai-projects {
-            margin-top: 2rem;
-        }
-
-        .ai-project-card {
-            background: #f5f5f7;
-            padding: 2.5rem;
-            border-radius: 12px;
-            margin-bottom: 2rem;
-            transition: all 0.3s ease;
-        }
-
-        .ai-project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,113,227,0.15);
-        }
-
-        .project-header {
+        .experience-header {
             display: flex;
             justify-content: space-between;
             align-items: start;
-            margin-bottom: 1rem;
+            margin-bottom: 15px;
             flex-wrap: wrap;
-            gap: 1rem;
         }
 
-        .project-header h3 {
-            color: #1d1d1f;
-            font-size: 1.5rem;
+        .job-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .company {
+            color: #667eea;
             font-weight: 600;
-            flex: 1;
-            min-width: 250px;
+            font-size: 1.1em;
         }
 
-        .project-tag {
-            background: #0071e3;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
+        .duration {
+            color: #666;
+            font-style: italic;
         }
 
-        .project-description {
-            color: #1d1d1f;
-            font-size: 1.05rem;
+        .responsibilities {
+            list-style: none;
+            padding: 0;
+        }
+
+        .responsibilities li {
+            padding: 8px 0 8px 25px;
+            position: relative;
             line-height: 1.6;
-            margin-bottom: 1.5rem;
+        }
+
+        .responsibilities li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .ai-section {
+            background: linear-gradient(135deg, #667eea10 0%, #764ba210 100%);
+            padding: 40px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+
+        .ai-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .ai-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-top: 4px solid #667eea;
+        }
+
+        .ai-card h4 {
+            color: #667eea;
+            margin-bottom: 12px;
+            font-size: 1.2em;
         }
 
         .prompt-example {
-            background: white;
-            padding: 1.5rem;
+            background: #f8f9fa;
+            padding: 15px;
             border-radius: 8px;
-            margin: 1.5rem 0;
-            border-left: 4px solid #0071e3;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85em;
+            margin: 15px 0;
+            color: #555;
+            border-left: 3px solid #764ba2;
         }
 
-        .prompt-example h4 {
-            color: #0071e3;
-            font-size: 1rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .prompt-example pre {
-            background: #1d1d1f;
-            color: #00ff00;
-            padding: 1rem;
-            border-radius: 6px;
-            overflow-x: auto;
-            font-family: 'Monaco', 'Menlo', monospace;
-            font-size: 0.9rem;
-            line-height: 1.5;
-        }
-
-        .prompt-example code {
-            color: #00ff00;
-        }
-
-        .impact-metrics {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1rem;
-            margin: 1.5rem 0;
-        }
-
-        .metric {
-            text-align: center;
-            padding: 1rem;
-            background: white;
-            border-radius: 8px;
-        }
-
-        .metric-value {
-            display: block;
-            font-size: 2rem;
-            font-weight: 600;
-            color: #0071e3;
-            margin-bottom: 0.25rem;
-        }
-
-        .metric-label {
-            display: block;
-            font-size: 0.85rem;
-            color: #6e6e73;
-        }
-
-        .tech-stack {
+        .ai-metrics {
             display: flex;
+            gap: 15px;
+            margin-top: 15px;
             flex-wrap: wrap;
-            gap: 0.75rem;
-            margin-top: 1.5rem;
         }
 
-        .tech-badge {
-            background: white;
-            border: 2px solid #0071e3;
-            color: #0071e3;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: all 0.3s ease;
+        .ai-metric {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 0.9em;
         }
 
-        .tech-badge:hover {
-            background: #0071e3;
-            color: white;
-            transform: scale(1.05);
+        .ai-metric strong {
+            color: #667eea;
+            font-size: 1.2em;
+            display: block;
         }
 
-        .ai-skills-highlight {
-            margin-top: 3rem;
-            padding: 2rem;
-            background: #f5f5f7;
-            border-radius: 12px;
-        }
-
-        .ai-skills-highlight h3 {
-            color: #1d1d1f;
-            font-size: 1.75rem;
-            font-weight: 600;
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-
-        .skills-showcase {
+        .certifications {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
         }
 
-        .skill-item {
-            text-align: center;
-            padding: 1.5rem;
+        .cert-item {
+            background: #f8f9fa;
+            padding: 15px 20px;
+            border-radius: 10px;
+            border-left: 4px solid #764ba2;
+            transition: transform 0.3s;
+        }
+
+        .cert-item:hover {
+            transform: translateX(5px);
+        }
+
+        .education-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-left: 4px solid #667eea;
+        }
+
+        .achievements {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .achievement-card {
             background: white;
+            padding: 20px;
             border-radius: 12px;
-            transition: all 0.3s ease;
+            border: 2px solid #667eea30;
+            transition: all 0.3s;
         }
 
-        .skill-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(0,113,227,0.2);
+        .achievement-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
         }
 
-        .skill-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+        .achievement-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
         }
 
-        .skill-item h4 {
-            color: #0071e3;
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 0.75rem;
-        }
-
-        .skill-item p {
-            color: #6e6e73;
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
-
-        footer {
-            background: #f5f5f7;
-            color: #1d1d1f;
-            text-align: center;
-            padding: 3rem 2rem;
-            margin-top: 4rem;
-        }
-
-        footer p {
-            font-size: 1rem;
-            color: #6e6e73;
-        }
-
-        @media (max-width: 1200px) {
-            .skills-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .highlights {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .skills-showcase {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .certifications-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+        .publications {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #764ba2;
+            margin-bottom: 15px;
         }
 
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.5rem;
+            body {
+                padding: 10px;
             }
-
-            header p {
-                font-size: 1.25rem;
+            
+            h1 {
+                font-size: 2em;
             }
-
-            header {
-                padding: 4rem 2rem 3rem;
+            
+            .subtitle {
+                font-size: 1.2em;
             }
-
-            .container {
-                padding: 2rem 1.5rem;
+            
+            .content {
+                padding: 30px 20px;
             }
-
-            h2 {
-                font-size: 2rem;
-            }
-
-            .stats-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .highlights {
-                grid-template-columns: 1fr;
-            }
-
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-
-            section {
-                padding: 2rem 1.5rem;
-            }
-
-            .project-header {
-                flex-direction: column;
-            }
-
-            .project-header h3 {
-                font-size: 1.25rem;
-            }
-
-            .prompt-example pre {
-                font-size: 0.8rem;
-                padding: 0.75rem;
-            }
-
-            .impact-metrics {
-                grid-template-columns: 1fr;
-            }
-
-            .skills-showcase {
-                grid-template-columns: 1fr;
-            }
-
-            .ai-project-card {
-                padding: 1.5rem;
-            }
-
-            .certifications-grid {
-                grid-template-columns: 1fr;
+            
+            .contact-info {
+                gap: 15px;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Yogeshwar Kulkarni</h1>
-        <p>Senior Software Engineer in Test</p>
-        <p style="font-size: 1.1rem; opacity: 0.9;">Quality Leadership | Healthcare & Distributed Systems</p>
-        <div class="contact-links">
-            <a href="/cdn-cgi/l/email-protection#6f161f41041a03040e1d01065e5d5c2f08020e0603410c0002"><span class="__cf_email__" data-cfemail="09707927627c6562687b6760383b3a496e64686065276a6664">[email&#160;protected]</span></a>
-            <a href="https://www.linkedin.com/in/yogeshwar-kulkarni-b35b3610/" target="_blank">LinkedIn</a>
-        </div>
-    </header>
-
     <div class="container">
-        <section id="about">
-            <h2>About</h2>
-            <p class="hero-intro">
-                Senior Software Quality Engineer with 9+ years of experience delivering high-quality, reliable software across healthcare and streaming platforms. I specialize in system validation, end-to-end verification, and leading quality strategy for mission-critical applications.
-            </p>
-            
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-number">9+</div>
-                    <div class="stat-label">Years Experience</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">25%</div>
-                    <div class="stat-label">Test Coverage Increase</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">300+</div>
-                    <div class="stat-label">Bugs Identified</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">50%</div>
-                    <div class="stat-label">Reliability Improvement</div>
-                </div>
+        <header>
+            <h1>Yogeshwar Kulkarni</h1>
+            <div class="subtitle">Software Development Engineer in Test (SDET)</div>
+            <div class="tagline">Test Automation Leadership | Code Reviews | Quality Engineering | Salesforce Certified</div>
+            <div class="contact-info">
+                <a href="mailto:yp.kulkarni123@gmail.com">📧 yp.kulkarni123@gmail.com</a>
+                <a href="https://www.linkedin.com/in/yogeshwar-kulkarni-b35b3610/" target="_blank">🔗 LinkedIn</a>
+                <a href="tel:+15109538400">📱 +1-510-953-8400</a>
+                <span>📍 San Jose, CA</span>
             </div>
+        </header>
 
-            <div class="highlights">
-                <div class="highlight-card">Software Validation & Verification</div>
-                <div class="highlight-card">Quality Strategy & Release Readiness</div>
-                <div class="highlight-card">Backend & RESTful API Testing</div>
-                <div class="highlight-card">End-to-End System Testing</div>
-                <div class="highlight-card">Healthcare & Clinical Applications</div>
-                <div class="highlight-card">CI/CD & Risk-Based Testing</div>
-                <div class="highlight-card">Test Automation Frameworks</div>
-                <div class="highlight-card">QA Mentorship & Leadership</div>
-            </div>
-        </section>
+        <div class="content">
+            <!-- About Section -->
+            <section id="about">
+                <h2>About</h2>
+                <p class="about-text">
+                    Software Development Engineer in Test with 10+ years of proven experience building comprehensive test automation 
+                    frameworks, driving quality engineering initiatives, and mentoring engineering teams across the testing pyramid. 
+                    Deep expertise in Java, Selenium, Appium, REST API testing, and CI/CD automation using Jenkins. Proven track record 
+                    designing and delivering automation frameworks with a quality-first approach, conducting code and design reviews, 
+                    and providing technical leadership to scrum teams. Skilled at mastering complex codebases, collaborating with Product 
+                    and UX teams, observing quality health metrics, and driving cross-product testing initiatives. Salesforce Certified 
+                    Developer with strong understanding of cloud platforms and enterprise software quality assurance.
+                </p>
 
-        <section id="ai-showcase">
-            <h2>AI & Prompt Engineering in Practice</h2>
-            <p class="hero-intro">
-                Leveraging AI and advanced prompt engineering to transform healthcare testing workflows, improve efficiency, and ensure quality in mission-critical systems.
-            </p>
-
-            <div class="ai-projects">
-                <div class="ai-project-card">
-                    <div class="project-header">
-                        <h3>AI-Powered Test Generation for Clinical Workflows</h3>
-                        <span class="project-tag">Natera Inc</span>
+                <div class="stats">
+                    <div class="stat-card">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Years Experience</span>
                     </div>
-                    <p class="project-description">
-                        Implemented GitHub Copilot and advanced prompt engineering to accelerate test creation for blood and tissue clinical workflows, reducing test authoring time by 40%.
-                    </p>
-                    
-                    <div class="prompt-example">
-                        <h4>Prompt Engineering Example:</h4>
-                        <pre><code>// Generate RestAssured test for clinical sample order workflow
+                    <div class="stat-card">
+                        <span class="stat-number">25%</span>
+                        <span class="stat-label">Test Coverage Increase</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">200+</span>
+                        <span class="stat-label">Defects Identified</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">30%</span>
+                        <span class="stat-label">Downtime Reduction</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- AI & Prompt Engineering Section -->
+            <section id="ai-engineering" class="ai-section">
+                <h2>AI & Prompt Engineering in Practice</h2>
+                <p style="font-size: 1.1em; margin-bottom: 25px; color: #555;">
+                    Leveraging AI and advanced prompt engineering to transform healthcare testing workflows, improve efficiency, 
+                    and ensure quality in mission-critical systems.
+                </p>
+
+                <div class="ai-cards">
+                    <div class="ai-card">
+                        <h4>🤖 AI-Powered Test Generation</h4>
+                        <p>Implemented GitHub Copilot and advanced prompt engineering to accelerate test creation for clinical workflows.</p>
+                        <div class="prompt-example">
+// Generate RestAssured test for clinical sample order
 // POST request with patientId, sampleType, testPanel
-// Validate: 201 status, orderId generated, HIPAA audit log created
-// Include: specimen type validation, turnaround time check
-// Error cases: duplicate order, invalid patient, missing consent</code></pre>
+// Validate: 201 status, orderId generated, audit log
+// Include: specimen validation, turnaround time check
+// Error cases: duplicate order, invalid patient
+                        </div>
+                        <div class="ai-metrics">
+                            <div class="ai-metric">
+                                <strong>40%</strong>
+                                Faster Test Creation
+                            </div>
+                            <div class="ai-metric">
+                                <strong>500+</strong>
+                                AI-Generated Tests
+                            </div>
+                            <div class="ai-metric">
+                                <strong>95%</strong>
+                                Code Quality
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="impact-metrics">
-                        <div class="metric">
-                            <span class="metric-value">40%</span>
-                            <span class="metric-label">Faster Test Creation</span>
-                        </div>
-                        <div class="metric">
-                            <span class="metric-value">500+</span>
-                            <span class="metric-label">AI-Generated Tests</span>
-                        </div>
-                        <div class="metric">
-                            <span class="metric-value">95%</span>
-                            <span class="metric-label">Code Quality</span>
-                        </div>
-                    </div>
-
-                    <div class="tech-stack">
-                        <span class="tech-badge">GitHub Copilot</span>
-                        <span class="tech-badge">RestAssured</span>
-                        <span class="tech-badge">TestNG</span>
-                        <span class="tech-badge">Java</span>
-                    </div>
-                </div>
-
-                <div class="ai-project-card">
-                    <div class="project-header">
-                        <h3>HIPAA-Compliant Test Data Generation</h3>
-                        <span class="project-tag">Natera Inc</span>
-                    </div>
-                    <p class="project-description">
-                        Developed AI-driven test data generation system for patient records, ensuring realistic yet compliant synthetic data for comprehensive testing without PHI exposure.
-                    </p>
-                    
-                    <div class="prompt-example">
-                        <h4>Prompt Engineering Pattern:</h4>
-                        <pre><code>// Generate POJO for Patient with HIPAA-compliant test data
+                    <div class="ai-card">
+                        <h4>🔬 HIPAA-Compliant Test Data Generation</h4>
+                        <p>Developed AI-driven test data generation system for patient records with synthetic data.</p>
+                        <div class="prompt-example">
+// Generate POJO for Patient with HIPAA-compliant data
 // Fields: MRN (format: MRN-{8 digits}), DOB (age 18-85)
-// Include: realistic names, contact info, medical history
+// Include: realistic names, contact info
 // Exclude: real PHI, use synthetic data only
-// Add: Builder pattern, validation, Lombok annotations</code></pre>
+// Add: Builder pattern, validation, Lombok
+                        </div>
+                        <div class="ai-metrics">
+                            <div class="ai-metric">
+                                <strong>100%</strong>
+                                HIPAA Compliant
+                            </div>
+                            <div class="ai-metric">
+                                <strong>10K+</strong>
+                                Test Records
+                            </div>
+                            <div class="ai-metric">
+                                <strong>60%</strong>
+                                Time Saved
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="impact-metrics">
-                        <div class="metric">
-                            <span class="metric-value">100%</span>
-                            <span class="metric-label">HIPAA Compliant</span>
-                        </div>
-                        <div class="metric">
-                            <span class="metric-value">10K+</span>
-                            <span class="metric-label">Test Records</span>
-                        </div>
-                        <div class="metric">
-                            <span class="metric-value">60%</span>
-                            <span class="metric-label">Time Saved</span>
-                        </div>
-                    </div>
-
-                    <div class="tech-stack">
-                        <span class="tech-badge">OpenAI API</span>
-                        <span class="tech-badge">Java</span>
-                        <span class="tech-badge">Faker Library</span>
-                        <span class="tech-badge">ChatGPT</span>
-                    </div>
-                </div>
-
-                <div class="ai-project-card">
-                    <div class="project-header">
-                        <h3>Intelligent API Validation Framework</h3>
-                        <span class="project-tag">Natera Inc</span>
-                    </div>
-                    <p class="project-description">
-                        Built AI-enhanced validation framework that generates comprehensive API assertions, schema validation, and edge case coverage for clinical data endpoints.
-                    </p>
-                    
-                    <div class="prompt-example">
-                        <h4>Advanced Validation Prompt:</h4>
-                        <pre><code>// Create schema validation test for lab results workflow
+                    <div class="ai-card">
+                        <h4>✅ Intelligent API Validation Framework</h4>
+                        <p>Built AI-enhanced validation framework with comprehensive API assertions and schema validation.</p>
+                        <div class="prompt-example">
+// Create schema validation for lab results workflow
 // POST request with complex nested structure
-// Validate: JSON schema, business rules, clinical ranges
-// Check: result values within normal ranges per test type
-// Include: boundary testing, null handling, data integrity</code></pre>
+// Validate: JSON schema, business rules, ranges
+// Check: result values within normal ranges
+// Include: boundary testing, null handling
+                        </div>
+                        <div class="ai-metrics">
+                            <div class="ai-metric">
+                                <strong>85%</strong>
+                                Edge Case Coverage
+                            </div>
+                            <div class="ai-metric">
+                                <strong>30%</strong>
+                                Defect Detection ↑
+                            </div>
+                            <div class="ai-metric">
+                                <strong>300+</strong>
+                                Validation Rules
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="impact-metrics">
-                        <div class="metric">
-                            <span class="metric-value">85%</span>
-                            <span class="metric-label">Edge Case Coverage</span>
-                        </div>
-                        <div class="metric">
-                            <span class="metric-value">30%</span>
-                            <span class="metric-label">Defect Detection ↑</span>
-                        </div>
-                        <div class="metric">
-                            <span class="metric-value">300+</span>
-                            <span class="metric-label">Validation Rules</span>
-                        </div>
-                    </div>
-
-                    <div class="tech-stack">
-                        <span class="tech-badge">RestAssured</span>
-                        <span class="tech-badge">JSON Schema</span>
-                        <span class="tech-badge">Hamcrest</span>
-                        <span class="tech-badge">AI Copilot</span>
-                    </div>
-                </div>
-
-                <div class="ai-project-card">
-                    <div class="project-header">
-                        <h3>AI-Assisted Test Strategy & Planning</h3>
-                        <span class="project-tag">Natera Inc</span>
-                    </div>
-                    <p class="project-description">
-                        Utilized AI to analyze feature requirements and automatically generate comprehensive test scenarios, risk assessments, and test coverage matrices for clinical workflows.
-                    </p>
-                    
-                    <div class="prompt-example">
-                        <h4>Strategic Planning Prompt:</h4>
-                        <pre><code>// Analyze patient consent workflow requirements
+                    <div class="ai-card">
+                        <h4>📋 AI-Assisted Test Strategy & Planning</h4>
+                        <p>Utilized AI to analyze requirements and generate comprehensive test scenarios and risk assessments.</p>
+                        <div class="prompt-example">
+// Analyze patient consent workflow requirements
 // Generate: test scenarios covering all consent types
 // Include: regulatory compliance (HIPAA, state laws)
-// Risk areas: data privacy, audit trails, patient rights
-// Output: test cases, edge cases, compliance checklist</code></pre>
-                    </div>
-
-                    <div class="impact-metrics">
-                        <div class="metric">
-                            <span class="metric-value">50%</span>
-                            <span class="metric-label">Planning Time ↓</span>
+// Risk areas: data privacy, audit trails
+// Output: test cases, edge cases, compliance
                         </div>
-                        <div class="metric">
-                            <span class="metric-value">120+</span>
-                            <span class="metric-label">Scenarios Generated</span>
+                        <div class="ai-metrics">
+                            <div class="ai-metric">
+                                <strong>50%</strong>
+                                Planning Time ↓
+                            </div>
+                            <div class="ai-metric">
+                                <strong>120+</strong>
+                                Scenarios Generated
+                            </div>
+                            <div class="ai-metric">
+                                <strong>Zero</strong>
+                                Compliance Issues
+                            </div>
                         </div>
-                        <div class="metric">
-                            <span class="metric-value">Zero</span>
-                            <span class="metric-label">Compliance Issues</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section id="experience">
+                <h2>Professional Experience</h2>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <div class="job-title">Senior Software Engineer in Test (SDET)</div>
+                            <div class="company">Natera Inc</div>
+                        </div>
+                        <div class="duration">November 2021 – Present</div>
+                    </div>
+                    <ul class="responsibilities">
+                        <li><strong>Automation Framework Leadership:</strong> Design and deliver comprehensive automation frameworks using Java, Selenium WebDriver, and TestNG for critical healthcare workflows, establishing quality-first foundation that guides engineering teams across the testing pyramid and enables shift-left testing practices</li>
+                        <li><strong>Code & Design Review Mentorship:</strong> Provide technical leadership and mentorship through regular code reviews and design reviews for features delivered by scrum team members, ensuring adherence to best practices, test automation standards, and quality requirements</li>
+                        <li><strong>Cross-Team Collaboration:</strong> Work closely with senior developers, Product Managers, and UX teams to understand business requirements, analyze feature specifications, and ensure deliverables meet both business and quality standards</li>
+                        <li><strong>Quality Metrics Observation:</strong> Monitor and analyze product-level quality health metrics including testability, test health, test coverage, and automation effectiveness; use data-driven insights to improve testing strategies and identify quality gaps</li>
+                        <li><strong>End-to-End Integration Testing:</strong> Build and execute cross-cloud-impacting integration automation (API and UI) with complex org setups and sophisticated data shapes, achieving 25% increase in regression test coverage</li>
+                        <li><strong>API & Functional Automation:</strong> Develop proficient functional automation for both UI and API layers using Java-based frameworks, REST API testing tools (Postman), and database validation with SQL queries</li>
+                        <li><strong>Production Issue Resolution:</strong> Tackle production issues through root cause analysis, rapid troubleshooting, and verification of fixes to ensure stable outcomes and prevent recurrence</li>
+                        <li><strong>Test Strategy & Planning:</strong> Participate in test design review processes for integration test plans, focusing on functional, business scenarios, high-impact projects, usability, and accessibility requirements</li>
+                        <li><strong>Customer Advocacy:</strong> Advocate for customer improvements by identifying user experience gaps, validating customer workflows, and ensuring quality from end-user perspective</li>
+                        <li><strong>Leadership & Mentoring:</strong> Provide leadership and mentorship to QA engineers on scrum team and across other teams, setting standards for test environment setup, data management, and automation best practices</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <div class="job-title">Quality Assurance Automation Engineer</div>
+                            <div class="company">Minerva Networks Inc</div>
+                        </div>
+                        <div class="duration">January 2016 – November 2021</div>
+                    </div>
+                    <ul class="responsibilities">
+                        <li><strong>Mobile Application Testing:</strong> Led comprehensive testing of Android and iOS mobile applications across diverse devices and platforms, demonstrating hands-on experience with mobile testing frameworks including Appium and device automation</li>
+                        <li><strong>Java-Based Framework Development:</strong> Developed and enhanced robust Java automation frameworks using Selenium WebDriver, JUnit, and Cucumber, implementing best practices that improved test maintainability and enabled rapid test development</li>
+                        <li><strong>Cross-Product Testing Excellence:</strong> Prioritized and drove cross-product testing across Android, iOS, mobile, tablet, and OTT devices (Roku, Fire TV, Apple TV, Set-Top Box, Chromecast), identifying and resolving 200+ defects to enhance application stability</li>
+                        <li><strong>API Automation Mastery:</strong> Built comprehensive API automation suites using SoapUI and Groovy scripting for REST and SOAP services, contributing to 30% reduction in system downtime and improved integration reliability</li>
+                        <li><strong>CI/CD Pipeline Implementation:</strong> Created and maintained CI/CD automation pipelines using Jenkins for continuous integration, automated test execution, and rapid feedback loops, supporting Agile development cycles</li>
+                        <li><strong>Developer Tools Proficiency:</strong> Utilized Git, Maven, and Eclipse IDE extensively for version control, build management, and test development, demonstrating fluency with standard developer toolchain</li>
+                        <li><strong>Complex Technical Challenges:</strong> Collaborated with app developers to analyze and solve complex challenges related to Android and iOS native applications, including performance issues, integration problems, and platform-specific bugs</li>
+                        <li><strong>Database Testing & Validation:</strong> Performed comprehensive database testing using SQL, validating data integrity, executing ad hoc queries for test verification, and ensuring accurate data flow</li>
+                        <li><strong>Quick Learning & Problem-Solving:</strong> Demonstrated ability to learn quickly and master new technologies, codebases, and testing approaches; applied strong problem-solving skills to tackle sophisticated org setups and complex data shapes</li>
+                        <li><strong>REST Principles Expertise:</strong> Applied solid understanding of REST principles to design effective API tests, validate web services, and ensure proper integration between system components</li>
+                        <li><strong>Technical Communication:</strong> Conveyed technical information clearly and concisely to cross-functional stakeholders, developers, and management through status updates, test reports, and quality assessments</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Key Achievements Section -->
+            <section id="achievements">
+                <h2>Key Achievements & Impact</h2>
+                <div class="achievements">
+                    <div class="achievement-card">
+                        <div class="achievement-icon">📈</div>
+                        <h4>Test Coverage Excellence</h4>
+                        <p>Increased regression test coverage by 25% through strategic automation and shift-left testing practices</p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">⚡</div>
+                        <h4>System Reliability</h4>
+                        <p>Reduced system downtime by 30% through comprehensive API automation and integration testing</p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">🐛</div>
+                        <h4>Quality Assurance</h4>
+                        <p>Identified and resolved 200+ critical defects across mobile and cross-platform applications</p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">🔧</div>
+                        <h4>Infrastructure Optimization</h4>
+                        <p>Improved system reliability by 50% through infrastructure engineering and environment optimization</p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">👥</div>
+                        <h4>Team Leadership</h4>
+                        <p>Mentored 5+ engineers on automation best practices, code reviews, and quality standards</p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">🚀</div>
+                        <h4>CI/CD Excellence</h4>
+                        <p>Established CI/CD pipelines enabling continuous testing and faster release cycles</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technical Skills Section -->
+            <section id="skills">
+                <h2>Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Programming Languages</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Java (Expert)</span>
+                            <span class="skill-tag">Groovy</span>
+                            <span class="skill-tag">Kotlin</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Shell Scripting</span>
                         </div>
                     </div>
 
-                    <div class="tech-stack">
-                        <span class="tech-badge">ChatGPT-4</span>
-                        <span class="tech-badge">Claude AI</span>
-                        <span class="tech-badge">JAMA</span>
-                        <span class="tech-badge">TestRail</span>
+                    <div class="skill-category">
+                        <h4>Test Automation Frameworks</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Selenium WebDriver</span>
+                            <span class="skill-tag">Appium</span>
+                            <span class="skill-tag">Espresso</span>
+                            <span class="skill-tag">UI Automator</span>
+                            <span class="skill-tag">Compose UI Test</span>
+                            <span class="skill-tag">JUnit</span>
+                            <span class="skill-tag">TestNG</span>
+                            <span class="skill-tag">Jest</span>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="ai-skills-highlight">
-                <h3>AI & Prompt Engineering Expertise</h3>
-                <div class="skills-showcase">
-                    <div class="skill-item">
-                        <div class="skill-icon">🤖</div>
-                        <h4>AI-Powered Test Automation</h4>
-                        <p>Leveraging GitHub Copilot, ChatGPT, and Claude for intelligent test generation and maintenance</p>
+                    <div class="skill-category">
+                        <h4>Mobile Testing</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Android</span>
+                            <span class="skill-tag">iOS</span>
+                            <span class="skill-tag">Appium</span>
+                            <span class="skill-tag">Espresso</span>
+                            <span class="skill-tag">UI Automator</span>
+                            <span class="skill-tag">Physical Device Testing</span>
+                        </div>
                     </div>
-                    <div class="skill-item">
-                        <div class="skill-icon">✍️</div>
-                        <h4>Advanced Prompt Engineering</h4>
-                        <p>Crafting precise prompts for complex healthcare testing scenarios with 95%+ accuracy</p>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-icon">🔬</div>
-                        <h4>Healthcare AI Testing</h4>
-                        <p>Specialized in testing ML models, clinical decision support systems, and AI-driven diagnostics</p>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-icon">📊</div>
-                        <h4>AI Test Strategy</h4>
-                        <p>Designing test architectures that incorporate AI for continuous improvement and optimization</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section id="experience">
-            <h2>Experience</h2>
-            
-            <div class="experience-item">
-                <div class="experience-title">
-                    <h3>Senior Software Engineer in Test</h3>
-                    <p class="company">Natera Inc</p>
-                    <p class="date">September 2021 - Present</p>
-                </div>
-                <ul>
-                    <li>Lead end-to-end quality assurance for complex healthcare platforms, including system-level validation for critical blood and tissue clinical workflows</li>
-                    <li>Pioneered AI-powered test automation strategy using GitHub Copilot and advanced prompt engineering, reducing test creation time by 40% while maintaining 95%+ code quality</li>
-                    <li>Drive test strategy and automation initiatives, increasing regression coverage by 25% and significantly reducing production defects</li>
-                    <li>Developed HIPAA-compliant AI test data generation system, creating 10,000+ synthetic patient records for comprehensive testing without PHI exposure</li>
-                    <li>Partner with Engineering, Architecture, and Product teams to identify edge cases, integration gaps, and performance risks early in development</li>
-                    <li>Conduct root cause analysis on production issues and mentor junior QA engineers on AI-assisted test design and quality best practices</li>
-                </ul>
-            </div>
+                    <div class="skill-category">
+                        <h4>API & Web Services</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">REST APIs</span>
+                            <span class="skill-tag">SOAP</span>
+                            <span class="skill-tag">Postman</span>
+                            <span class="skill-tag">SoapUI</span>
+                            <span class="skill-tag">Swagger</span>
+                            <span class="skill-tag">API Automation</span>
+                        </div>
+                    </div>
 
-            <div class="experience-item">
-                <div class="experience-title">
-                    <h3>Quality Assurance Automation Engineer</h3>
-                    <p class="company">Minerva Networks Inc</p>
-                    <p class="date">January 2016 - November 2021</p>
-                </div>
-                <ul>
-                    <li>Led comprehensive testing of IPTV streaming applications across 10+ device types including mobile, web, and OTT platforms</li>
-                    <li>Designed and implemented automation frameworks with Java, Selenium, and Cucumber, dramatically improving test efficiency and coverage</li>
-                    <li>Built REST API test automation using SoapUI and Groovy, contributing to 30% reduction in system downtime and 20% improvement in data throughput</li>
-                    <li>Managed QA environments on Linux, AWS, and Kubernetes; implemented CI/CD pipelines with Jenkins</li>
-                </ul>
-            </div>
-        </section>
+                    <div class="skill-category">
+                        <h4>CI/CD & DevOps</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Jenkins</span>
+                            <span class="skill-tag">Hudson</span>
+                            <span class="skill-tag">Bamboo</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">GitHub</span>
+                            <span class="skill-tag">GitLab</span>
+                            <span class="skill-tag">Maven</span>
+                            <span class="skill-tag">Gradle</span>
+                        </div>
+                    </div>
 
-        <section id="skills">
-            <h2>Skills</h2>
-            
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>AI & Prompt Engineering</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">GitHub Copilot</span>
-                        <span class="skill-tag">ChatGPT-4</span>
-                        <span class="skill-tag">Claude AI</span>
-                        <span class="skill-tag">OpenAI API</span>
-                        <span class="skill-tag">Prompt Engineering</span>
+                    <div class="skill-category">
+                        <h4>Developer Tools</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Eclipse IDE</span>
+                            <span class="skill-tag">IntelliJ IDEA</span>
+                            <span class="skill-tag">Android Studio</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">Maven</span>
+                            <span class="skill-tag">Gradle</span>
+                        </div>
                     </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Languages & Scripting</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Groovy</span>
-                        <span class="skill-tag">Shell</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Automation & Testing</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Selenium</span>
-                        <span class="skill-tag">Appium</span>
-                        <span class="skill-tag">TestNG</span>
-                        <span class="skill-tag">Cucumber</span>
-                        <span class="skill-tag">WireMock</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>API & Data</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Postman</span>
-                        <span class="skill-tag">Swagger</span>
-                        <span class="skill-tag">SoapUI</span>
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">MongoDB</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>CI/CD & DevOps</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Jenkins</span>
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">AWS</span>
-                        <span class="skill-tag">Kubernetes</span>
-                        <span class="skill-tag">Docker</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Test Management</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">TestRail</span>
-                        <span class="skill-tag">Zephyr</span>
-                        <span class="skill-tag">JAMA</span>
-                        <span class="skill-tag">Agile/Scrum</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Platforms</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Linux</span>
-                        <span class="skill-tag">Windows</span>
-                        <span class="skill-tag">macOS</span>
-                        <span class="skill-tag">CentOS</span>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section id="education">
-            <h2>Education</h2>
-            <div class="education-item">
-                <h3>Master of Science in Computer Science</h3>
-                <p class="education-details">San Francisco Bay University | 2014 - 2015</p>
-            </div>
-            <div class="education-item">
-                <h3>Bachelor's Degree in Computer Engineering</h3>
-                <p class="education-details">University of Pune, India | 2011 - 2013</p>
-            </div>
-            <div class="education-item">
-                <h3>Technical Diploma in Computer Technology</h3>
-                <p class="education-details">Maharashtra State Board of Technical Education | 2006 - 2010</p>
-            </div>
-        </section>
+                    <div class="skill-category">
+                        <h4>Database & SQL</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">SQL (Proficient)</span>
+                            <span class="skill-tag">Oracle DB</span>
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">Database Validation</span>
+                        </div>
+                    </div>
 
-        <section id="certifications">
-            <h2>Certifications</h2>
-            <div class="certifications-grid">
-                <div class="cert-item">Mabl AI Foundations</div>
-                <div class="cert-item">REST API Testing - RestAssured Java</div>
-                <div class="cert-item">Selenium WebDriver with Java</div>
-                <div class="cert-item">Salesforce Certified Developer</div>
-                <div class="cert-item">OpenAI API</div>
-                <div class="cert-item">CAPM Certification Prep</div>
-            </div>
-        </section>
+                    <div class="skill-category">
+                        <h4>Cloud Platforms</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">Kubernetes</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">Linux</span>
+                        </div>
+                    </div>
 
-        <section id="publications">
-            <h2>Publications</h2>
-            <div class="publications">
-                <h3>"Artificial Intelligence in Software Testing"</h3>
-                <p>International Journal of Innovative Science and Research Technology, June 2024</p>
-            </div>
-            <div class="publications">
-                <h3>"Android Automotive OS"</h3>
-                <p>Published research article</p>
-            </div>
-        </section>
+                    <div class="skill-category">
+                        <h4>Quality Frameworks</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Test Design Review</span>
+                            <span class="skill-tag">Test Coverage Analysis</span>
+                            <span class="skill-tag">Quality Health Metrics</span>
+                            <span class="skill-tag">Shift-Left Testing</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Salesforce</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Salesforce Certified Developer</span>
+                            <span class="skill-tag">Platform Knowledge</span>
+                            <span class="skill-tag">Org Setup</span>
+                            <span class="skill-tag">Complex Data Shapes</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>AI & Prompt Engineering</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">GitHub Copilot</span>
+                            <span class="skill-tag">ChatGPT-4</span>
+                            <span class="skill-tag">Claude AI</span>
+                            <span class="skill-tag">OpenAI API</span>
+                            <span class="skill-tag">Prompt Engineering</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>Methodologies</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Agile/Scrum</span>
+                            <span class="skill-tag">SDLC</span>
+                            <span class="skill-tag">Test-Driven Development</span>
+                            <span class="skill-tag">Continuous Testing</span>
+                            <span class="skill-tag">Code Reviews</span>
+                            <span class="skill-tag">Design Reviews</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section id="education">
+                <h2>Education</h2>
+                <div class="education-item">
+                    <h3>Master of Science in Computer Science</h3>
+                    <p><strong>San Francisco Bay University</strong> | Fremont, CA | May 2014 – August 2015</p>
+                </div>
+                <div class="education-item">
+                    <h3>Bachelor of Engineering in Computer Engineering</h3>
+                    <p><strong>University of Pune</strong> | Pune, India | July 2010 – May 2013</p>
+                </div>
+            </section>
+
+            <!-- Certifications Section -->
+            <section id="certifications">
+                <h2>Certifications & Professional Development</h2>
+                <div class="certifications">
+                    <div class="cert-item">🏆 Salesforce Certified Developer</div>
+                    <div class="cert-item">🤖 Mabl AI Foundations Certification</div>
+                    <div class="cert-item">🔧 REST API Automation (Udemy)</div>
+                    <div class="cert-item">⚙️ Selenium WebDriver with Java</div>
+                    <div class="cert-item">🧠 OpenAI API (LinkedIn Learning)</div>
+                    <div class="cert-item">📋 CAPM Certification Prep</div>
+                </div>
+            </section>
+
+            <!-- Publications Section -->
+            <section id="publications">
+                <h2>Publications</h2>
+                <div class="publications">
+                    <h4>"Artificial Intelligence (AI) in Software Testing"</h4>
+                    <p>Co-authored research paper published in International Journal of Innovative Science and Research Technology (IJISRT), June 2024</p>
+                </div>
+                <div class="publications">
+                    <h4>"Android Automotive OS"</h4>
+                    <p>Published research article on Android Automotive platform development and testing</p>
+                </div>
+            </section>
+        </div>
     </div>
-
-    <footer>
-        <p style="font-size: 1.1rem; margin-b
+</body>
+</html>
