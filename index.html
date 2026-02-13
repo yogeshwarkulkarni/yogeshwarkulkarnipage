@@ -858,7 +858,7 @@
         
         <section id="projects">
             <div class="container">
-                <h2 class="section-title">Featured Project</h2>
+                <h2 class="section-title">Featured AI Automation Projects</h2>
                 
                 <div class="featured-project">
                     <div class="project-header">
@@ -1021,7 +1021,200 @@
                     </div>
                 </div>
                 
+                <!-- LangChain Framework Project -->
+                <div class="featured-project" style="margin-top: 6rem;">
+                    <div class="project-header">
+                        <div class="project-icon">🦜</div>
+                        <div class="project-title-group">
+                            <h2>LangChain Agent Framework</h2>
+                            <p class="project-subtitle">AI Agent Automation with TypeScript & LangChain</p>
+                        </div>
+                    </div>
+                    
+                    <div class="project-content">
+                        <p class="project-description">
+                            Developed a sophisticated AI agent automation framework using LangChain.js, demonstrating advanced knowledge of agentic workflows, tool integration, and conversational AI. This project showcases the ability to build intelligent agents that can reason, plan, and execute complex tasks autonomously using state-of-the-art LLM orchestration patterns.
+                        </p>
+                        
+                        <div class="tech-stack">
+                            <span class="tech-badge">TypeScript</span>
+                            <span class="tech-badge">LangChain.js</span>
+                            <span class="tech-badge">Node.js</span>
+                            <span class="tech-badge">Zod Schema Validation</span>
+                            <span class="tech-badge">Claude AI</span>
+                            <span class="tech-badge">Tool Calling</span>
+                            <span class="tech-badge">Agent Orchestration</span>
+                            <span class="tech-badge">Middleware Patterns</span>
+                        </div>
+                        
+                        <div class="ai-workflow">
+                            <h3>🎯 LangChain Agent Architecture Implementation</h3>
+                            <div class="workflow-steps">
+                                <div class="workflow-step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Tool Definition & Schema Validation</h4>
+                                        <p>Implemented custom tools using LangChain's tool framework with Zod schema validation. Created type-safe tool definitions that enable the AI agent to understand and execute specific actions with proper input validation.</p>
+                                        <div class="code-block">
+<code><span class="comment">// Weather Tool Implementation with Zod Schema</span>
+<span class="highlight">import</span> { tool } <span class="highlight">from</span> <span class="highlight">"langchain"</span>;
+<span class="highlight">import</span> { z } <span class="highlight">from</span> <span class="highlight">"zod"</span>;
+
+<span class="highlight">const</span> getWeather = tool(
+  <span class="highlight">async</span> ({ city }: { city: string }) => {
+    <span class="comment">// Integration with weather API</span>
+    <span class="highlight">return</span> <span class="highlight">`The weather in ${city} is sunny.`</span>;
+  },
+  {
+    name: <span class="highlight">"get_weather"</span>,
+    description: <span class="highlight">"Get current weather for a city"</span>,
+    schema: z.object({
+      city: z.string().describe(<span class="highlight">"City name"</span>),
+    }),
+  }
+);</code>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="workflow-step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Agent Creation & Model Integration</h4>
+                                        <p>Built intelligent agents using LangChain's createAgent pattern, integrating Claude AI models for natural language understanding and reasoning. The agent autonomously decides when to use tools based on user queries.</p>
+                                        <div class="code-block">
+<code><span class="comment">// Agent with Claude AI and Custom Tools</span>
+<span class="highlight">import</span> { createAgent } <span class="highlight">from</span> <span class="highlight">"langchain"</span>;
+
+<span class="highlight">const</span> agent = createAgent({
+  model: <span class="highlight">"claude-sonnet-4-20250514"</span>,
+  tools: [getWeather],
+  systemPrompt: <span class="highlight">"You are a helpful weather assistant."</span>,
+});
+
+<span class="comment">// Agent autonomously calls tools when needed</span>
+<span class="highlight">const</span> result = <span class="highlight">await</span> agent.invoke({
+  messages: [{ role: <span class="highlight">"user"</span>, content: <span class="highlight">"What's the weather in SF?"</span> }]
+});</code>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="workflow-step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Middleware Implementation for Control Flow</h4>
+                                        <p>Developed custom middleware to control agent behavior, implement human-in-the-loop workflows, add logging, and create guardrails. This demonstrates understanding of advanced agentic patterns and production-ready AI systems.</p>
+                                        <div class="code-block">
+<code><span class="comment">// Custom Middleware for Agent Control</span>
+<span class="highlight">class</span> WeatherMiddleware <span class="highlight">implements</span> AgentMiddleware {
+  tools = [getWeather, getTemperature];
+  
+  <span class="comment">// Hook into agent execution lifecycle</span>
+  <span class="highlight">async</span> beforeToolCall(tool, input) {
+    console.log(<span class="highlight">`Executing: ${tool.name}`</span>);
+    <span class="comment">// Add custom logic, validation, logging</span>
+  }
+}</code>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="workflow-step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h4>TypeScript Best Practices & Type Safety</h4>
+                                        <p>Leveraged TypeScript's type system to create fully type-safe agent implementations. Used interfaces, generics, and Zod schemas to ensure runtime and compile-time safety across the entire agent workflow.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="workflow-step">
+                                    <div class="step-number">5</div>
+                                    <div class="step-content">
+                                        <h4>Multi-Agent Orchestration</h4>
+                                        <p>Explored LangChain's capabilities for creating sub-agent architectures where specialized agents handle specific domains. This pattern enables building more complex, modular AI systems that can delegate tasks efficiently.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <div class="feature-icon">🤖</div>
+                                <h3>Autonomous Decision Making</h3>
+                                <p>Agent intelligently decides when and how to use tools based on natural language queries, demonstrating advanced reasoning capabilities.</p>
+                            </div>
+                            
+                            <div class="feature-card">
+                                <div class="feature-icon">🔒</div>
+                                <h3>Type-Safe Architecture</h3>
+                                <p>Full TypeScript implementation with Zod schema validation ensures runtime safety and catches errors before they reach production.</p>
+                            </div>
+                            
+                            <div class="feature-card">
+                                <div class="feature-icon">🔧</div>
+                                <h3>Custom Tool Integration</h3>
+                                <p>Built custom tools that extend the agent's capabilities, enabling integration with external APIs, databases, and services.</p>
+                            </div>
+                            
+                            <div class="feature-card">
+                                <div class="feature-icon">🎛️</div>
+                                <h3>Middleware Control Flow</h3>
+                                <p>Implemented middleware patterns for fine-grained control over agent execution, enabling logging, validation, and custom business logic.</p>
+                            </div>
+                            
+                            <div class="feature-card">
+                                <div class="feature-icon">🧠</div>
+                                <h3>Claude AI Integration</h3>
+                                <p>Leveraged Claude Sonnet 4's advanced reasoning capabilities for natural language understanding and intelligent task execution.</p>
+                            </div>
+                            
+                            <div class="feature-card">
+                                <div class="feature-icon">📦</div>
+                                <h3>Modular Design</h3>
+                                <p>Clean, maintainable codebase following TypeScript and Node.js best practices, making the framework easily extensible and testable.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="project-links">
+                            <a href="https://github.com/yogeshwarkulkarni/LangChain-Framework" class="btn btn-primary" target="_blank">
+                                View on GitHub →
+                            </a>
+                            <a href="#contact" class="btn btn-secondary">
+                                Discuss Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
                 <h2 class="section-title" style="margin-top: 6rem;">AI & Prompt Engineering in Practice</h2>
+                
+                <!-- Framework Comparison -->
+                <div class="ai-workflow" style="margin-bottom: 4rem;">
+                    <h3>🔄 Synergies Between REST Assured & LangChain Frameworks</h3>
+                    <div class="features-grid" style="margin-top: 2rem;">
+                        <div class="feature-card">
+                            <div class="feature-icon">🧪</div>
+                            <h3>REST Assured Focus</h3>
+                            <p><strong>API Testing Automation</strong><br>
+                            Validates backend functionality, ensures API contracts, and catches regressions in web services. Perfect for quality engineering and test automation.</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon">🦜</div>
+                            <h3>LangChain Focus</h3>
+                            <p><strong>AI Agent Orchestration</strong><br>
+                            Builds intelligent agents that reason, plan, and execute tasks autonomously. Ideal for creating AI-powered automation and conversational systems.</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon">⚡</div>
+                            <h3>Combined Power</h3>
+                            <p><strong>Intelligent Test Automation</strong><br>
+                            Imagine LangChain agents that autonomously generate REST Assured tests, analyze API failures, and suggest fixes - the future of QA automation!</p>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="ai-grid">
                     <div class="ai-card">
