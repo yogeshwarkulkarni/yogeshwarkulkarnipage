@@ -7,6 +7,22 @@
 ---
 
 <!--LIVE:START-->
+### Right now
+- **Building:** AI-assisted test automation and quality tooling
+- **Learning:** Applying LLMs and agents to testing
+- **Reading:** Papers and posts on AI evaluation and test strategy
+- **Open to:** Collaborations, QA + AI conversations, coffee chats
+
+### Last commits
+- Quiet stretch. Heads down on something.
+
+### Recently active repos
+- [yogeshwarkulkarnipage](https://github.com/yogeshwarkulkarni/yogeshwarkulkarnipage) · HTML
+- [playwright-project](https://github.com/yogeshwarkulkarni/playwright-project) · Python
+- [PythonProjectPlaywright](https://github.com/yogeshwarkulkarni/PythonProjectPlaywright) · Python
+- [mock-api-json](https://github.com/yogeshwarkulkarni/mock-api-json) · n/a
+
+*Last refreshed 2026-11-20 17:55 UTC*
 <!--LIVE:END-->
 
 ---
